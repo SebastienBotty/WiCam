@@ -1,11 +1,17 @@
 {
   "expo": {
     "name": "WiCam",
-    "slug": "WiCam",
+    "slug": "wicam",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "40f4949b-b4b5-4562-9822-e618107503ba"
+      }
+    },
+    "owner": "seb_botty"
   },
   "name": "WiCam"
 }

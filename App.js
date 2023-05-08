@@ -1,15 +1,28 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React,{useState} from 'react';
+import { StyleSheet, Text, View,Button } from 'react-native';
+import MainContainer from './navigation/MainContainer'
+import SignUp from './navigation/screens/SignUp'
+
 
 export default function App() {
+
+  const [isLogged,setLogged] = useState(false)
+  const updateIsLogged = newValue => {
+    setLogged(newValue);
+  };
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    isLogged ? (
+      <SignUp updateIsLogged={updateIsLogged}/>
+    ) : (
+      <MainContainer />
+    )
   );
 }
+
+
+
+
 
 const styles = StyleSheet.create({
   container: {
